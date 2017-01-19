@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6694F4CB9ABC9D95BAAEC5C /* libPods-coolNavi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E954AA2ADCC43DC7DEBE2EF /* libPods-coolNavi.a */; };
+		EE5827111E2CCA4700B0EA3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827101E2CCA4700B0EA3F /* main.m */; };
+		EE5827141E2CCA4700B0EA3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827131E2CCA4700B0EA3F /* AppDelegate.m */; };
+		EE5827171E2CCA4700B0EA3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827161E2CCA4700B0EA3F /* ViewController.m */; };
+		EE58271A1E2CCA4700B0EA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5827181E2CCA4700B0EA3F /* Main.storyboard */; };
+		EE58271C1E2CCA4700B0EA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE58271B1E2CCA4700B0EA3F /* Assets.xcassets */; };
+		EE58271F1E2CCA4700B0EA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE58271D1E2CCA4700B0EA3F /* LaunchScreen.storyboard */; };
+		EE58272A1E2CCA4700B0EA3F /* coolNaviTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827291E2CCA4700B0EA3F /* coolNaviTests.m */; };
+		EE5827351E2CCA4700B0EA3F /* coolNaviUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827341E2CCA4700B0EA3F /* coolNaviUITests.m */; };
+		EE58274C1E2DD79D00B0EA3F /* LTHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58274B1E2DD79D00B0EA3F /* LTHeadView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE5827261E2CCA4700B0EA3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE5827041E2CCA4700B0EA3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE58270B1E2CCA4700B0EA3F;
+			remoteInfo = coolNavi;
+		};
+		EE5827311E2CCA4700B0EA3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE5827041E2CCA4700B0EA3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE58270B1E2CCA4700B0EA3F;
+			remoteInfo = coolNavi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E954AA2ADCC43DC7DEBE2EF /* libPods-coolNavi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coolNavi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		968941A99646C8179DDCA440 /* Pods-coolNavi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolNavi.release.xcconfig"; path = "Pods/Target Support Files/Pods-coolNavi/Pods-coolNavi.release.xcconfig"; sourceTree = "<group>"; };
+		C550AA66B06DE372F8BA599D /* Pods-coolNavi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolNavi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coolNavi/Pods-coolNavi.debug.xcconfig"; sourceTree = "<group>"; };
+		EE58270C1E2CCA4700B0EA3F /* coolNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coolNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE5827101E2CCA4700B0EA3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE5827121E2CCA4700B0EA3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE5827131E2CCA4700B0EA3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE5827151E2CCA4700B0EA3F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE5827161E2CCA4700B0EA3F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE5827191E2CCA4700B0EA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE58271B1E2CCA4700B0EA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE58271E1E2CCA4700B0EA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE5827201E2CCA4700B0EA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE5827251E2CCA4700B0EA3F /* coolNaviTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coolNaviTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE5827291E2CCA4700B0EA3F /* coolNaviTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coolNaviTests.m; sourceTree = "<group>"; };
+		EE58272B1E2CCA4700B0EA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE5827301E2CCA4700B0EA3F /* coolNaviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coolNaviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE5827341E2CCA4700B0EA3F /* coolNaviUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coolNaviUITests.m; sourceTree = "<group>"; };
+		EE5827361E2CCA4700B0EA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE58274A1E2DD79D00B0EA3F /* LTHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTHeadView.h; sourceTree = "<group>"; };
+		EE58274B1E2DD79D00B0EA3F /* LTHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTHeadView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE5827091E2CCA4700B0EA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6694F4CB9ABC9D95BAAEC5C /* libPods-coolNavi.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5827221E2CCA4700B0EA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE58272D1E2CCA4700B0EA3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AD5559F8595C66D2C101B6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E954AA2ADCC43DC7DEBE2EF /* libPods-coolNavi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F99931E6AA9AC28A28034D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C550AA66B06DE372F8BA599D /* Pods-coolNavi.debug.xcconfig */,
+				968941A99646C8179DDCA440 /* Pods-coolNavi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE5827031E2CCA4700B0EA3F = {
+			isa = PBXGroup;
+			children = (
+				EE58270E1E2CCA4700B0EA3F /* coolNavi */,
+				EE5827281E2CCA4700B0EA3F /* coolNaviTests */,
+				EE5827331E2CCA4700B0EA3F /* coolNaviUITests */,
+				EE58270D1E2CCA4700B0EA3F /* Products */,
+				8F99931E6AA9AC28A28034D3 /* Pods */,
+				6AD5559F8595C66D2C101B6C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE58270D1E2CCA4700B0EA3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE58270C1E2CCA4700B0EA3F /* coolNavi.app */,
+				EE5827251E2CCA4700B0EA3F /* coolNaviTests.xctest */,
+				EE5827301E2CCA4700B0EA3F /* coolNaviUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE58270E1E2CCA4700B0EA3F /* coolNavi */ = {
+			isa = PBXGroup;
+			children = (
+				EE5827121E2CCA4700B0EA3F /* AppDelegate.h */,
+				EE5827131E2CCA4700B0EA3F /* AppDelegate.m */,
+				EE5827151E2CCA4700B0EA3F /* ViewController.h */,
+				EE5827161E2CCA4700B0EA3F /* ViewController.m */,
+				EE58274A1E2DD79D00B0EA3F /* LTHeadView.h */,
+				EE58274B1E2DD79D00B0EA3F /* LTHeadView.m */,
+				EE5827181E2CCA4700B0EA3F /* Main.storyboard */,
+				EE58271B1E2CCA4700B0EA3F /* Assets.xcassets */,
+				EE58271D1E2CCA4700B0EA3F /* LaunchScreen.storyboard */,
+				EE5827201E2CCA4700B0EA3F /* Info.plist */,
+				EE58270F1E2CCA4700B0EA3F /* Supporting Files */,
+			);
+			path = coolNavi;
+			sourceTree = "<group>";
+		};
+		EE58270F1E2CCA4700B0EA3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE5827101E2CCA4700B0EA3F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE5827281E2CCA4700B0EA3F /* coolNaviTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE5827291E2CCA4700B0EA3F /* coolNaviTests.m */,
+				EE58272B1E2CCA4700B0EA3F /* Info.plist */,
+			);
+			path = coolNaviTests;
+			sourceTree = "<group>";
+		};
+		EE5827331E2CCA4700B0EA3F /* coolNaviUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE5827341E2CCA4700B0EA3F /* coolNaviUITests.m */,
+				EE5827361E2CCA4700B0EA3F /* Info.plist */,
+			);
+			path = coolNaviUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE58270B1E2CCA4700B0EA3F /* coolNavi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE5827391E2CCA4700B0EA3F /* Build configuration list for PBXNativeTarget "coolNavi" */;
+			buildPhases = (
+				8C8E98015DE7F11087881698 /* [CP] Check Pods Manifest.lock */,
+				EE5827081E2CCA4700B0EA3F /* Sources */,
+				EE5827091E2CCA4700B0EA3F /* Frameworks */,
+				EE58270A1E2CCA4700B0EA3F /* Resources */,
+				EBC0CB19781CDA39ACC963B9 /* [CP] Embed Pods Frameworks */,
+				11A426FC0E98EFFB0B34E174 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = coolNavi;
+			productName = coolNavi;
+			productReference = EE58270C1E2CCA4700B0EA3F /* coolNavi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE5827241E2CCA4700B0EA3F /* coolNaviTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE58273C1E2CCA4700B0EA3F /* Build configuration list for PBXNativeTarget "coolNaviTests" */;
+			buildPhases = (
+				EE5827211E2CCA4700B0EA3F /* Sources */,
+				EE5827221E2CCA4700B0EA3F /* Frameworks */,
+				EE5827231E2CCA4700B0EA3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE5827271E2CCA4700B0EA3F /* PBXTargetDependency */,
+			);
+			name = coolNaviTests;
+			productName = coolNaviTests;
+			productReference = EE5827251E2CCA4700B0EA3F /* coolNaviTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE58272F1E2CCA4700B0EA3F /* coolNaviUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE58273F1E2CCA4700B0EA3F /* Build configuration list for PBXNativeTarget "coolNaviUITests" */;
+			buildPhases = (
+				EE58272C1E2CCA4700B0EA3F /* Sources */,
+				EE58272D1E2CCA4700B0EA3F /* Frameworks */,
+				EE58272E1E2CCA4700B0EA3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE5827321E2CCA4700B0EA3F /* PBXTargetDependency */,
+			);
+			name = coolNaviUITests;
+			productName = coolNaviUITests;
+			productReference = EE5827301E2CCA4700B0EA3F /* coolNaviUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE5827041E2CCA4700B0EA3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "顾玉玺";
+				TargetAttributes = {
+					EE58270B1E2CCA4700B0EA3F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					EE5827241E2CCA4700B0EA3F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE58270B1E2CCA4700B0EA3F;
+					};
+					EE58272F1E2CCA4700B0EA3F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE58270B1E2CCA4700B0EA3F;
+					};
+				};
+			};
+			buildConfigurationList = EE5827071E2CCA4700B0EA3F /* Build configuration list for PBXProject "coolNavi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE5827031E2CCA4700B0EA3F;
+			productRefGroup = EE58270D1E2CCA4700B0EA3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE58270B1E2CCA4700B0EA3F /* coolNavi */,
+				EE5827241E2CCA4700B0EA3F /* coolNaviTests */,
+				EE58272F1E2CCA4700B0EA3F /* coolNaviUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE58270A1E2CCA4700B0EA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58271F1E2CCA4700B0EA3F /* LaunchScreen.storyboard in Resources */,
+				EE58271C1E2CCA4700B0EA3F /* Assets.xcassets in Resources */,
+				EE58271A1E2CCA4700B0EA3F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5827231E2CCA4700B0EA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE58272E1E2CCA4700B0EA3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11A426FC0E98EFFB0B34E174 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-coolNavi/Pods-coolNavi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8E98015DE7F11087881698 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC0CB19781CDA39ACC963B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-coolNavi/Pods-coolNavi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE5827081E2CCA4700B0EA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5827171E2CCA4700B0EA3F /* ViewController.m in Sources */,
+				EE5827141E2CCA4700B0EA3F /* AppDelegate.m in Sources */,
+				EE58274C1E2DD79D00B0EA3F /* LTHeadView.m in Sources */,
+				EE5827111E2CCA4700B0EA3F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5827211E2CCA4700B0EA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58272A1E2CCA4700B0EA3F /* coolNaviTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE58272C1E2CCA4700B0EA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5827351E2CCA4700B0EA3F /* coolNaviUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE5827271E2CCA4700B0EA3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE58270B1E2CCA4700B0EA3F /* coolNavi */;
+			targetProxy = EE5827261E2CCA4700B0EA3F /* PBXContainerItemProxy */;
+		};
+		EE5827321E2CCA4700B0EA3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE58270B1E2CCA4700B0EA3F /* coolNavi */;
+			targetProxy = EE5827311E2CCA4700B0EA3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE5827181E2CCA4700B0EA3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE5827191E2CCA4700B0EA3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE58271D1E2CCA4700B0EA3F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE58271E1E2CCA4700B0EA3F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE5827371E2CCA4700B0EA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE5827381E2CCA4700B0EA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE58273A1E2CCA4700B0EA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C550AA66B06DE372F8BA599D /* Pods-coolNavi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = coolNavi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghjgj-.coolNavi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE58273B1E2CCA4700B0EA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968941A99646C8179DDCA440 /* Pods-coolNavi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = coolNavi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghjgj-.coolNavi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE58273D1E2CCA4700B0EA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = coolNaviTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghjgj-.coolNaviTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coolNavi.app/coolNavi";
+			};
+			name = Debug;
+		};
+		EE58273E1E2CCA4700B0EA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = coolNaviTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghjgj-.coolNaviTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coolNavi.app/coolNavi";
+			};
+			name = Release;
+		};
+		EE5827401E2CCA4700B0EA3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = coolNaviUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghjgj-.coolNaviUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = coolNavi;
+			};
+			name = Debug;
+		};
+		EE5827411E2CCA4700B0EA3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = coolNaviUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghjgj-.coolNaviUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = coolNavi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE5827071E2CCA4700B0EA3F /* Build configuration list for PBXProject "coolNavi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE5827371E2CCA4700B0EA3F /* Debug */,
+				EE5827381E2CCA4700B0EA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE5827391E2CCA4700B0EA3F /* Build configuration list for PBXNativeTarget "coolNavi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE58273A1E2CCA4700B0EA3F /* Debug */,
+				EE58273B1E2CCA4700B0EA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE58273C1E2CCA4700B0EA3F /* Build configuration list for PBXNativeTarget "coolNaviTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE58273D1E2CCA4700B0EA3F /* Debug */,
+				EE58273E1E2CCA4700B0EA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE58273F1E2CCA4700B0EA3F /* Build configuration list for PBXNativeTarget "coolNaviUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE5827401E2CCA4700B0EA3F /* Debug */,
+				EE5827411E2CCA4700B0EA3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE5827041E2CCA4700B0EA3F /* Project object */;
+}
