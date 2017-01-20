@@ -46,7 +46,9 @@
         [self addSubview:scorll];
         
         // 最上面部分
-        [self topHeadViewWith:scorll];
+        if (topViewHeight!=0) {
+            [self topHeadViewWith:scorll];
+        }
         
         // 横条
         UIScrollView *topTitleScorllView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, topViewHeight, frame.size.width, headHeight)];
@@ -61,6 +63,7 @@
         contentScorllView.delegate = self;
         contentScorllView.backgroundColor = [UIColor yellowColor];
         contentScorllView.showsHorizontalScrollIndicator = NO;
+        contentScorllView.showsVerticalScrollIndicator = NO;
         [scorll addSubview:contentScorllView];
         self.topTitleScorllView = topTitleScorllView;
         self.contentScorllView = contentScorllView;
@@ -72,7 +75,7 @@
 - (void)controllers:(NSArray *)controllers showUnderline:(BOOL)showUnderline{
     
     // buttons  之间的间隙
-    CGFloat buttonsGap = 60.0;
+    CGFloat buttonsGap = 20.0;
     
     // top scroll 的容量
     CGFloat titleScrollViewContentSizeOfWidth = 20.0;
@@ -103,7 +106,7 @@
         
         if (40+(controllers.count-1)*(buttonRealSize.width+buttonsGap)+buttonRealSize.width<=SCREEN_WIDTH) {
             button.titleLabel.textAlignment = NSTextAlignmentCenter;
-            button.frame = CGRectMake(i*SCREEN_WIDTH/controllers.count, (headHeight-buttonRealSize.height)/2, SCREEN_WIDTH/controllers.count, buttonRealSize.height);
+            button.frame = CGRectMake((SCREEN_WIDTH/controllers.count-buttonRealSize.width)/2+i*SCREEN_WIDTH/controllers.count, (headHeight-buttonRealSize.height)/2, buttonRealSize.width, buttonRealSize.height);
             if (i == controllers.count-1) {
                 titleScrollViewContentSizeOfWidth = SCREEN_WIDTH;
             }
@@ -209,7 +212,6 @@
     UILabel *underlineLabel = [self.topTitleScorllView viewWithTag:303];
     [UIView animateWithDuration:0.3 animations:^{
         underlineLabel.frame = CGRectMake(CGRectGetMinX(btn.frame), headHeight-6,CGRectGetWidth(btn.frame), 3);
-
     }];
 
 }

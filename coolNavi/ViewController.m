@@ -31,7 +31,6 @@
     vc1.title = @"头条";
     vc1.view.backgroundColor = [UIColor grayColor];
     
-    
     UIViewController *vc2 = [[UIViewController alloc] init];
     vc2.title = @"热点";
     vc2.view.backgroundColor = [UIColor grayColor];
