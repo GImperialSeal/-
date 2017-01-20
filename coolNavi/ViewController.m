@@ -20,22 +20,6 @@
 
 
 @implementation ViewController
-
-//- (void)loadView{
-//    [super loadView];
-//    CGFloat width = [[UIScreen mainScreen]bounds].size.width;
-//    CGFloat height = [[UIScreen mainScreen]bounds].size.height;
-//    
-//    // content scorllview
-//    UIScrollView *scorllView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, topViewHeight, width, height)];
-//    scorllView.contentSize = CGSizeMake(width, height-64);
-//    scorllView.backgroundColor = [UIColor orangeColor];
-//    scorllView.bounces = NO;
-//    scorllView.directionalLockEnabled = YES;
-//    scorllView.showsVerticalScrollIndicator = NO;
-//    
-//    self.view = [[GFCoolNaviView alloc]initWithFrame:CGRectMake(0, 0, width, height)];
-//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

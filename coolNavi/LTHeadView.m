@@ -42,8 +42,6 @@
         scorll.contentSize = CGSizeMake(0, SCREEN_HEIGHT+topViewHeight-naviagtionHeight);
         scorll.bounces = NO;
         scorll.directionalLockEnabled = YES;
-        //scorll.contentInset = UIEdgeInsetsMake(170, 0 ,0 , 0);
-
         [scorll addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
         [self addSubview:scorll];
         
@@ -231,9 +229,9 @@
     imageView.transform = CGAffineTransformMakeTranslation(0,topViewHeight*scale);
     
     // 签名
-    UILabel *label = [self viewWithTag:102];
-    label.transform = CGAffineTransformMakeTranslation(0, -point.y);
-    label.alpha = 1-scale;
+//    UILabel *label = [self viewWithTag:102];
+//    label.transform = CGAffineTransformMakeTranslation(0, -point.y);
+//    label.alpha = 1-scale;
     
 }
 
@@ -245,22 +243,29 @@
 // 最上面的背景图片
 - (void)topHeadViewWith:(UIScrollView *)scorll{
     // 背景图片
+//    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background"]];
+//    imageView.tag = 1001;
+//    imageView.frame = CGRectMake(0, -naviagtionHeight, SCREEN_WIDTH, topViewHeight+naviagtionHeight);
+//    
+//    // 签名
+//    UILabel *label = [[UILabel alloc]init];
+//    label.frame = CGRectMake(21, 100, 300, 80);
+//    label.numberOfLines = 2;
+//    label.font = [UIFont systemFontOfSize:14];
+//    label.textColor = [UIColor whiteColor];
+//    label.text = @"妹子!\n个性签名,啦啦啦!";
+//    label.textAlignment = NSTextAlignmentCenter;
+//    label.tag = 102;
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, topViewHeight+naviagtionHeight)];
+    view.backgroundColor = [UIColor yellowColor];
+    
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background"]];
-    imageView.tag = 1001;
-    imageView.frame = CGRectMake(0, -naviagtionHeight, SCREEN_WIDTH, topViewHeight+naviagtionHeight);
+    imageView.frame = CGRectMake(30, 30, 80, 80);
     
-    // 签名
-    UILabel *label = [[UILabel alloc]init];
-    label.frame = CGRectMake(120, 100, 300, 80);
-    label.numberOfLines = 2;
-    label.font = [UIFont systemFontOfSize:14];
-    label.textColor = [UIColor whiteColor];
-    label.text = @"妹子!\n个性签名,啦啦啦!";
-    label.textAlignment = NSTextAlignmentCenter;
-    label.tag = 102;
+    [view addSubview:imageView];
     
-    [scorll addSubview:imageView];
-    [scorll addSubview:label];
+    [scorll addSubview:view];
 }
 
 - (UIScrollView *)topTitleScorllView{
