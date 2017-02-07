@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A6694F4CB9ABC9D95BAAEC5C /* libPods-coolNavi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E954AA2ADCC43DC7DEBE2EF /* libPods-coolNavi.a */; };
+		EE155B3D1E31D7B00042CF09 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE155B3C1E31D7B00042CF09 /* 123.jpg */; };
+		EE155B401E31D7D10042CF09 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE155B3F1E31D7D10042CF09 /* TableViewCell.m */; };
 		EE5827111E2CCA4700B0EA3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827101E2CCA4700B0EA3F /* main.m */; };
 		EE5827141E2CCA4700B0EA3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827131E2CCA4700B0EA3F /* AppDelegate.m */; };
 		EE5827171E2CCA4700B0EA3F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827161E2CCA4700B0EA3F /* ViewController.m */; };
@@ -16,7 +18,7 @@
 		EE58271F1E2CCA4700B0EA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE58271D1E2CCA4700B0EA3F /* LaunchScreen.storyboard */; };
 		EE58272A1E2CCA4700B0EA3F /* coolNaviTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827291E2CCA4700B0EA3F /* coolNaviTests.m */; };
 		EE5827351E2CCA4700B0EA3F /* coolNaviUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5827341E2CCA4700B0EA3F /* coolNaviUITests.m */; };
-		EE58274C1E2DD79D00B0EA3F /* LTHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58274B1E2DD79D00B0EA3F /* LTHeadView.m */; };
+		EE58274C1E2DD79D00B0EA3F /* TableLinkage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58274B1E2DD79D00B0EA3F /* TableLinkage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		3E954AA2ADCC43DC7DEBE2EF /* libPods-coolNavi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coolNavi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		968941A99646C8179DDCA440 /* Pods-coolNavi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolNavi.release.xcconfig"; path = "Pods/Target Support Files/Pods-coolNavi/Pods-coolNavi.release.xcconfig"; sourceTree = "<group>"; };
 		C550AA66B06DE372F8BA599D /* Pods-coolNavi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coolNavi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coolNavi/Pods-coolNavi.debug.xcconfig"; sourceTree = "<group>"; };
+		EE155B3C1E31D7B00042CF09 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
+		EE155B3E1E31D7D10042CF09 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		EE155B3F1E31D7D10042CF09 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		EE58270C1E2CCA4700B0EA3F /* coolNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coolNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5827101E2CCA4700B0EA3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE5827121E2CCA4700B0EA3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,8 +61,8 @@
 		EE5827301E2CCA4700B0EA3F /* coolNaviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coolNaviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5827341E2CCA4700B0EA3F /* coolNaviUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coolNaviUITests.m; sourceTree = "<group>"; };
 		EE5827361E2CCA4700B0EA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE58274A1E2DD79D00B0EA3F /* LTHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTHeadView.h; sourceTree = "<group>"; };
-		EE58274B1E2DD79D00B0EA3F /* LTHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTHeadView.m; sourceTree = "<group>"; };
+		EE58274A1E2DD79D00B0EA3F /* TableLinkage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableLinkage.h; sourceTree = "<group>"; };
+		EE58274B1E2DD79D00B0EA3F /* TableLinkage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableLinkage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +133,15 @@
 		EE58270E1E2CCA4700B0EA3F /* coolNavi */ = {
 			isa = PBXGroup;
 			children = (
+				EE155B3C1E31D7B00042CF09 /* 123.jpg */,
 				EE5827121E2CCA4700B0EA3F /* AppDelegate.h */,
 				EE5827131E2CCA4700B0EA3F /* AppDelegate.m */,
 				EE5827151E2CCA4700B0EA3F /* ViewController.h */,
 				EE5827161E2CCA4700B0EA3F /* ViewController.m */,
-				EE58274A1E2DD79D00B0EA3F /* LTHeadView.h */,
-				EE58274B1E2DD79D00B0EA3F /* LTHeadView.m */,
+				EE155B3E1E31D7D10042CF09 /* TableViewCell.h */,
+				EE155B3F1E31D7D10042CF09 /* TableViewCell.m */,
+				EE58274A1E2DD79D00B0EA3F /* TableLinkage.h */,
+				EE58274B1E2DD79D00B0EA3F /* TableLinkage.m */,
 				EE5827181E2CCA4700B0EA3F /* Main.storyboard */,
 				EE58271B1E2CCA4700B0EA3F /* Assets.xcassets */,
 				EE58271D1E2CCA4700B0EA3F /* LaunchScreen.storyboard */,
@@ -279,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE58271F1E2CCA4700B0EA3F /* LaunchScreen.storyboard in Resources */,
+				EE155B3D1E31D7B00042CF09 /* 123.jpg in Resources */,
 				EE58271C1E2CCA4700B0EA3F /* Assets.xcassets in Resources */,
 				EE58271A1E2CCA4700B0EA3F /* Main.storyboard in Resources */,
 			);
@@ -355,7 +364,8 @@
 			files = (
 				EE5827171E2CCA4700B0EA3F /* ViewController.m in Sources */,
 				EE5827141E2CCA4700B0EA3F /* AppDelegate.m in Sources */,
-				EE58274C1E2DD79D00B0EA3F /* LTHeadView.m in Sources */,
+				EE58274C1E2DD79D00B0EA3F /* TableLinkage.m in Sources */,
+				EE155B401E31D7D10042CF09 /* TableViewCell.m in Sources */,
 				EE5827111E2CCA4700B0EA3F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

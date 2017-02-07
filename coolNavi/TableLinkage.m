@@ -6,7 +6,7 @@
 //  Copyright © 2016年 LongTengTechnologyCompany. All rights reserved.
 //
 
-#import "LTHeadView.h"
+#import "TableLinkage.h"
 
 // 横条高度
 #define headHeight 44
@@ -17,7 +17,7 @@
 // 顶部背景图的高度
 #define  topViewHeight  170
 
-@interface LTHeadView ()<UIScrollViewDelegate>
+@interface TableLinkage ()<UIScrollViewDelegate>
 
 @property (nonatomic,strong) UIScrollView *topTitleScorllView;
 // 选中按钮
@@ -32,46 +32,55 @@
 
 #define SP_SCREEN [UIScreen mainScreen].bounds.size.width/375
 
-@implementation LTHeadView
+@implementation TableLinkage
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame style:(TableLinkageStyle)style{
     if (self = [super initWithFrame:frame]) {
         
-        // 背景 scorll(最里面的scorll)
-        UIScrollView *scorll = [[UIScrollView alloc]initWithFrame:frame];
-        scorll.contentSize = CGSizeMake(0, SCREEN_HEIGHT+topViewHeight-naviagtionHeight);
-        scorll.bounces = NO;
-        scorll.directionalLockEnabled = YES;
-        [scorll addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-        [self addSubview:scorll];
-        
-        // 最上面部分
-        if (topViewHeight!=0) {
-            [self topHeadViewWith:scorll];
+        switch (style) {
+            case TableLinkageStyleHeadView:
+                [self TableLinkageStyleHeadViewFrame:frame];
+                break;
+            default:
+                [self TableLinkageStyleDefaultFrame:frame];
+                break;
         }
-        
-        // 横条
-        UIScrollView *topTitleScorllView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, topViewHeight, frame.size.width, headHeight)];
-        topTitleScorllView.backgroundColor = [UIColor orangeColor];
-        [scorll addSubview:topTitleScorllView];
-        
-        
-        
-        // 内容
-        UIScrollView *contentScorllView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(topTitleScorllView.frame), frame.size.width, frame.size.height-headHeight)];
-        contentScorllView.pagingEnabled = YES;
-        contentScorllView.delegate = self;
-        contentScorllView.backgroundColor = [UIColor yellowColor];
-        contentScorllView.showsHorizontalScrollIndicator = NO;
-        contentScorllView.showsVerticalScrollIndicator = NO;
-        [scorll addSubview:contentScorllView];
-        self.topTitleScorllView = topTitleScorllView;
-        self.contentScorllView = contentScorllView;
-        
-    }
+          }
     return self;
 }
 
+- (void)TableLinkageStyleDefaultFrame:(CGRect)frame{
+    
+    // 横条
+    self.topTitleScorllView.frame = CGRectMake(0, 0, frame.size.width, headHeight);
+    [self addSubview:self.topTitleScorllView];
+
+    \
+    // 内容
+    self.contentScorllView.frame =CGRectMake(0, CGRectGetMaxY(_topTitleScorllView.frame), frame.size.width, frame.size.height-headHeight);
+     [self addSubview:_contentScorllView];
+}
+
+- (void)TableLinkageStyleHeadViewFrame:(CGRect)frame{
+    // 背景 scorll(最里面的scorll)
+    UIScrollView *scorll = [[UIScrollView alloc]initWithFrame:frame];
+    scorll.contentSize = CGSizeMake(0, SCREEN_HEIGHT+topViewHeight-naviagtionHeight);
+    scorll.bounces = NO;
+    scorll.directionalLockEnabled = YES;
+    [scorll addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+    [self addSubview:scorll];
+    
+    // 最上面部分
+    [self topHeadViewWith:scorll];
+    // 横条
+    self.topTitleScorllView.frame = CGRectMake(0, topViewHeight, frame.size.width, headHeight);
+    [scorll addSubview:_topTitleScorllView];
+    
+    // 内容
+    self.contentScorllView.frame =CGRectMake(0, CGRectGetMaxY(_topTitleScorllView.frame), frame.size.width, frame.size.height-headHeight);
+    [scorll addSubview:_contentScorllView];
+    
+}
 - (void)controllers:(NSArray *)controllers showUnderline:(BOOL)showUnderline{
     
     // buttons  之间的间隙
@@ -100,6 +109,8 @@
         [button setTitle:VC.title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(clickTopViewButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.topTitleScorllView addSubview:button];
+
         
         // 自适应大小
         CGSize buttonRealSize = [button sizeThatFits:CGSizeMake(200, 100)];
@@ -110,17 +121,17 @@
             if (i == controllers.count-1) {
                 titleScrollViewContentSizeOfWidth = SCREEN_WIDTH;
             }
+            
+            NSLog(@"%@",NSStringFromCGRect(button.frame));
         }else{
              button.frame = CGRectMake(20+i%controllers.count*(buttonRealSize.width+buttonsGap), (headHeight-buttonRealSize.height)/2, buttonRealSize.width, buttonRealSize.height);
             if (i == controllers.count-1) {
                 // 20 最后一个button 与屏幕边缘的间距
                 titleScrollViewContentSizeOfWidth = CGRectGetMaxX(button.frame)+20;
             }
-        }
-        
-        [self.topTitleScorllView addSubview:button];
+            NSLog(@"111111:%@",NSStringFromCGRect(button.frame));
 
-        
+        }
         
         
         if (i == 0) {
@@ -211,7 +222,7 @@
     
     UILabel *underlineLabel = [self.topTitleScorllView viewWithTag:303];
     [UIView animateWithDuration:0.3 animations:^{
-        underlineLabel.frame = CGRectMake(CGRectGetMinX(btn.frame), headHeight-6,CGRectGetWidth(btn.frame), 3);
+        underlineLabel.frame = CGRectMake(CGRectGetMinX(btn.frame)-5, headHeight-6,CGRectGetWidth(btn.frame)+10, 2);
     }];
 
 }
@@ -271,13 +282,24 @@
 }
 
 - (UIScrollView *)topTitleScorllView{
-    if (_topTitleScorllView) return _topTitleScorllView;
+    if (!_topTitleScorllView) {
+        UIScrollView *topTitleScorllView = [[UIScrollView alloc]init];
+        topTitleScorllView.backgroundColor = [UIColor orangeColor];
+        _topTitleScorllView = topTitleScorllView;
+    }
     return _topTitleScorllView;
-    
 }
 
 - (UIScrollView *)contentScorllView{
-    if (_contentScorllView) return _contentScorllView;
+    if (!_contentScorllView) {
+        UIScrollView *contentScorllView = [[UIScrollView alloc]init];
+        contentScorllView.pagingEnabled = YES;
+        contentScorllView.delegate = self;
+        contentScorllView.backgroundColor = [UIColor yellowColor];
+        contentScorllView.showsHorizontalScrollIndicator = NO;
+        contentScorllView.showsVerticalScrollIndicator = NO;
+        _contentScorllView = contentScorllView;
+    }
     return _contentScorllView;
 }
 

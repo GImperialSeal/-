@@ -7,15 +7,14 @@
 //
 
 #import "ViewController.h"
-#import "LTHeadView.h"
-#define  topViewHeight  170
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "TableViewCell.h"
+#import "TableLinkage.h"
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
 
-@interface ViewController (){
-   LTHeadView *_headView;
-}
-
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 
@@ -23,8 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-   // [self headView];
+   // [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"id"];
     
     
     UIViewController *vc1 = [[UIViewController alloc] init];
@@ -49,68 +47,26 @@
     vc6.view.backgroundColor = [UIColor orangeColor];
     vc6.title = @"科技";
     
-    LTHeadView *headView = [[LTHeadView alloc] initWithFrame:self.view.bounds];
+    TableLinkage *headView = [[TableLinkage alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, SCREEN_HEIGHT-20) style:TableLinkageStyleHeadView];
     [headView controllers:@[vc1,vc2,vc3,vc4,vc5,vc6]showUnderline:NO] ;
     [self.view addSubview:headView];
+
     
 }
 
-- (void)headView{
-    
-    CGFloat width = [[UIScreen mainScreen]bounds].size.width;
-  //  CGFloat height = [[UIScreen mainScreen]bounds].size.height;
-
-    // 背景图片
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background"]];
-    imageView.tag = 101;
-    imageView.frame = CGRectMake(0, -64, width, topViewHeight+64);
-    
-    // 签名
-    UILabel *label = [[UILabel alloc]init];
-    label.frame = CGRectMake(120, 100, 300, 80);
-    label.numberOfLines = 2;
-    label.font = [UIFont systemFontOfSize:14];
-    label.textColor = [UIColor whiteColor];
-    label.text = @"妹子!\n个性签名,啦啦啦!";
-    label.textAlignment = NSTextAlignmentCenter;
-    label.tag = 102;
-   // [self.view addSubview:label];
-    
-    UIScrollView *scorll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    [scorll addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-
-    scorll.contentSize = CGSizeMake(0, 1000);
-    [self.view addSubview:scorll];
-    [scorll addSubview:imageView];
-    
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [tableView fd_heightForCellWithIdentifier:@"id" configuration:^(id cell) {
+        
+    }];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    CGPoint point = [change[@"new"] CGPointValue];
-    
-    NSLog(@"%f",point.y);
-    UIScrollView *scorllView = object;
-    CGFloat scale = point.y/(topViewHeight-64);
-    
-    scorllView.transform = CGAffineTransformMakeTranslation(0, -point.y);
-    
-    // 背景图
-    UIImageView *imageView = [self.view viewWithTag:101];
-    imageView.transform = CGAffineTransformMakeTranslation(0, point.y);
-    
-    // 签名
-    UILabel *label = [self.view viewWithTag:102];
-    label.transform = CGAffineTransformMakeTranslation(0, -point.y);
-    label.alpha = 1-scale;
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
 }
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id" forIndexPath:indexPath];
+    return cell;
 }
 
 
